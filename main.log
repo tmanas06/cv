@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.3)  4 OCT 2026 00:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.3)  4 OCT 2026 00:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -486,7 +486,19 @@ LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <10.95> n
 ot available
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
 n input line 409.
- [5] (./main.aux)
+
+Overfull \hbox (4.75739pt too wide) in paragraph at lines 414--414
+[]\T1/bch/m/n/10.95 Engineered OpenAI-compatible `/v1` proxy with smart prompt-
+based model rout-ing, Re-dis sliding-window
+ []
+
+
+Overfull \hbox (0.22261pt too wide) in paragraph at lines 434--434
+[]\T1/bch/m/n/10.95 Built con-ver-sa-tional culi-nary agent com-pil-ing live SS
+E streams into dy-namic UI com-po-nents, and gesture-
+ []
+
+[5] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -502,15 +514,16 @@ Here is how much of TeX's memory you used:
  656497 words of font info for 72 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  75i,6n,79p,332b,443s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </Users/manas/Desktop/cv/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600
-pk> </Users/manas/Desktop/cv/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0800.60
-0pk></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/fontawesome5/Fo
-ntAwesome5Brands-Regular.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/typ
-e1/public/fontawesome5/FontAwesome5Free-Solid.pfb></usr/local/texlive/2026basic
-/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texlive/2026bas
-ic/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive/2026b
-asic/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb>
-Output written on main.pdf (5 pages, 705321 bytes).
+ </Users/manas/Library/texlive/2026basic/texmf-var/fonts/pk/ljfour/jknappen/e
+c/ectt1000.600pk> </Users/manas/Library/texlive/2026basic/texmf-var/fonts/pk/lj
+four/jknappen/ec/ectt0800.600pk></usr/local/texlive/2026basic/texmf-dist/fonts/
+type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb></usr/local/texlive/20
+26basic/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><
+/usr/local/texlive/2026basic/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb
+></usr/local/texlive/2026basic/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.p
+fb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/bitstrea/charter/bchri8
+a.pfb>
+Output written on main.pdf (5 pages, 705665 bytes).
 PDF statistics:
  220 PDF objects out of 1000 (max. 8388607)
  88 compressed objects within 1 object stream

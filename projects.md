@@ -51,7 +51,7 @@
 | **[metaspace](https://github.com/tmanas06/metaspace)** | `Solidity / TypeScript` | VirtualVerse: Self-hosted on-chain 2D virtual office on Monad with proximity audio/video, ERC-1155 avatars, and Soulbound badges. | [https://metaspace-peach.vercel.app](https://metaspace-peach.vercel.app) | Aug 2026 |
 | **[hiring_challenge](https://github.com/tmanas06/hiring_challenge)** | `Solidity` | - | - | Aug 2026 |
 | **[Status-402](https://github.com/tmanas06/Status-402)** | `JavaScript` | - | [https://status402.vercel.app/](https://status402.vercel.app/) | Jun 2026 |
-| **[game-hub-monad](https://github.com/tmanas06/game-hub-monad)** | `TypeScript` | - | [https://game-hub-monad-setc.vercel.app/game](https://game-hub-monad-setc.vercel.app/game) | Feb 2026 |
+| **[game-hub-monad](https://github.com/tmanas06/game-hub-monad)** | `TypeScript` | Monad Blitz interactive multi-game arcade with swipe-based controls, on-chain leaderboards, and responsive Web3 gameplay. | [https://game-hub-monad-setc.vercel.app/game](https://game-hub-monad-setc.vercel.app/game) | Feb 2026 |
 | **[x402-Gasless-Gaming-Paywall](https://github.com/tmanas06/x402-Gasless-Gaming-Paywall)** | `TypeScript` | https://x402-gasless-gaming-paywall.vercel.app | [https://x402-gasless-gaming.vercel.app/](https://x402-gasless-gaming.vercel.app/) | Jan 2026 |
 | **[testnet_wallet](https://github.com/tmanas06/testnet_wallet)** | `TypeScript` | - | [https://testnet-wallet-teal.vercel.app/](https://testnet-wallet-teal.vercel.app/) | Jan 2026 |
 | **[Casper-Unified-Institutional-Suite](https://github.com/tmanas06/Casper-Unified-Institutional-Suite)** | `TypeScript` | - | [https://casper-unified-institutional-suite.vercel.app](https://casper-unified-institutional-suite.vercel.app) | Jan 2026 |
@@ -91,9 +91,9 @@
 | :--- | :--- | :--- | :--- | :--- |
 | **[ai-workforce](https://github.com/tmanas06/ai-workforce)** | `Python / TypeScript` | Local-first autonomous multi-agent orchestration platform. Deploys specialized agent teams (Architect, Dev, QA) with multi-provider routing (OpenRouter, Gemini, Ollama) and dynamic API key failover. | - | Sep 2026 |
 | **[NovelToVideo](https://github.com/tmanas06/NovelToVideo)** | `Python / FastAPI` | StoryToReel AI: Local-first automated offline pipeline converting stories and novels into short-form YouTube Shorts & Instagram Reels using Ollama, Stable Diffusion, and Piper TTS. | - | Aug 2026 |
-| **[local-ai-gateway](https://github.com/tmanas06/local-ai-gateway)** | `TypeScript` | - | - | Jun 2026 |
+| **[local-ai-gateway](https://github.com/tmanas06/local-ai-gateway)** | `Python / FastAPI` | Self-hosted OpenAI-compatible /v1 routing proxy with smart prompt-based model routing, Redis sliding-window rate limiting, and observability dashboard. | - | Jun 2026 |
 | **[migrate-ai](https://github.com/tmanas06/migrate-ai)** | `TypeScript` | - | [https://migrate-ai-seven.vercel.app](https://migrate-ai-seven.vercel.app) | Apr 2026 |
-| **[ChaatwalaGPT](https://github.com/tmanas06/ChaatwalaGPT)** | `TypeScript` | - | [https://chaatwala-gpt.vercel.app](https://chaatwala-gpt.vercel.app) | Mar 2026 |
+| **[ChaatwalaGPT](https://github.com/tmanas06/ChaatwalaGPT)** | `Next.js / TypeScript` | Personalized AI culinary companion with Hinglish street-vendor persona, compiling live SSE streams into dynamic UI components. | [https://chaatwala-gpt.vercel.app](https://chaatwala-gpt.vercel.app) | Mar 2026 |
 | **[ai-trade-dual](https://github.com/tmanas06/ai-trade-dual)** | `TypeScript` | - | - | Dec 2025 |
 | **[swipe_interview_ai](https://github.com/tmanas06/swipe_interview_ai)** | `TypeScript` | - | - | Sep 2025 |
 | **[VerBex-Ai_Sei](https://github.com/tmanas06/VerBex-Ai_Sei)** | `TypeScript` | - | - | Aug 2025 |
@@ -164,7 +164,7 @@
 | :--- | :--- | :--- | :--- | :--- |
 | **[dmusic](https://github.com/tmanas06/dmusic)** | `Dart` | - | - | Aug 2026 |
 | **[Task-Manager-mobile-app](https://github.com/tmanas06/Task-Manager-mobile-app)** | `JavaScript` | - | [https://task-manager-mobile-app.vercel.app](https://task-manager-mobile-app.vercel.app) | Apr 2026 |
-| **[BLE-flutter-app](https://github.com/tmanas06/BLE-flutter-app)** | `C++` | - | - | Mar 2026 |
+| **[BLE-flutter-app](https://github.com/tmanas06/BLE-flutter-app)** | `Flutter / Dart` | Reactive Bluetooth Low Energy IoT telemetry monitor with RSSI filtering, MTU auto-negotiation, and 24/7 background foreground service. | - | Mar 2026 |
 | **[GPS-Runner](https://github.com/tmanas06/GPS-Runner)** | `Dart` | - | - | Jan 2026 |
 | **[Challenge_flutter](https://github.com/tmanas06/Challenge_flutter)** | `C++` | - | - | Oct 2025 |
 | **[Habit_saver_flutter](https://github.com/tmanas06/Habit_saver_flutter)** | `C++` | a simple flutter app for keeping your day to day habits noted | - | Oct 2025 |
