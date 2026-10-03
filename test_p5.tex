@@ -1,0 +1,490 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[a4paper, top=0.6in, bottom=0.6in, left=0.6in, right=0.6in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}           % Bitstream Charter font (matches original CV typography)
+\usepackage{fontawesome5}      % FontAwesome 5 icons
+\usepackage{graphicx}          % Badge graphics
+\usepackage{enumitem}          % Compact lists
+\usepackage[hidelinks]{hyperref} % Clickable links without coloured boxes
+\usepackage{ragged2e}
+
+% --- Page Style ---
+\pagestyle{plain}              % Centered page numbering at the bottom
+
+% --- Toggle Badges ---
+\newif\ifshowbadges
+\showbadgestrue                % Set to \showbadgesfalse if you want text-only certifications without badge graphics
+
+% --- Custom Macros ---
+\newcommand{\cvsection}[1]{%
+  \vspace{10pt}%
+  {\large\textbf{\MakeUppercase{#1}}}%
+  \vspace{2pt}%
+  \hrule height 0.5pt%
+  \vspace{6pt}%
+}
+
+% Certification entry with badge support
+\newcommand{\certentry}[7]{%
+  % #1 = Image file in images/
+  % #2 = Certification Title
+  % #3 = Date range / validity
+  % #4 = Issuer
+  % #5 = Credential ID / Certification No
+  % #6 = Skills
+  % #7 = Verification link line (optional)
+  \noindent
+  \ifshowbadges
+    \begin{minipage}[c]{0.13\textwidth}
+      \IfFileExists{images/#1}{%
+        \includegraphics[width=\linewidth,height=0.85in,keepaspectratio]{images/#1}%
+      }{\vspace{0.85in}}%
+    \end{minipage}\hfill
+    \begin{minipage}[c]{0.85\textwidth}
+      \textbf{#2} \hfill \textbf{#3} \\
+      \textit{#4} \hfill \textit{#5} \\
+      \textbf{Skills:} #6%
+      #7
+    \end{minipage}%
+  \else
+    \begin{minipage}[c]{\textwidth}
+      \textbf{#2} \hfill \textbf{#3} \\
+      \textit{#4} \hfill \textit{#5} \\
+      \textbf{Skills:} #6%
+      #7
+    \end{minipage}%
+  \fi\par
+  \vspace{8pt}
+}
+
+% Project entry
+\newcommand{\projectentry}[4]{%
+  % #1 = Project Name
+  % #2 = Tech Stack
+  % #3 = Links
+  % #4 = Bullet points
+  \noindent
+  \faGithub\ \textbf{#1} \hfill \textit{#2} \\
+  {\small\texttt{#3}}
+  \begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+    #4
+  \end{itemize}
+  \vspace{2.5pt}
+}
+
+\begin{document}
+
+% ==============================================================================
+% HEADER
+% ==============================================================================
+\begin{center}
+  {\Huge \textbf{T MANAS CHAKRAVARTY}} \\[6pt]
+  \small
+  \faPhone*\ +91-9398264880 \quad \textbar \quad
+  \faEnvelope\ \href{mailto:2210030003cse@gmail.com}{2210030003cse@gmail.com} \quad \textbar \quad
+  \faMapMarker*\ Hyderabad, Telangana, India \\[3pt]
+  \faLinkedin\ \href{https://linkedin.com/in/t-manas-chakravarty-91958224b}{linkedin.com/in/t-manas-chakravarty-91958224b} \\[3pt]
+  \faGithub\ \href{https://github.com/tmanas06}{github.com/tmanas06} \quad \textbar \quad
+  \faGlobe\ \href{https://portfolio-tmanas.vercel.app}{portfolio-tmanas.vercel.app} \quad \textbar \quad
+  \faBlogger\ \href{https://techieresearch.blogspot.com}{techieresearch.blogspot.com}
+\end{center}
+
+% ==============================================================================
+% SUMMARY
+% ==============================================================================
+\cvsection{Summary}
+B.Tech (CSE Hons.) 2026 graduate specializing in Cybersecurity and Blockchain with experience in full-stack development, smart contracts, and scalable web applications. Skilled in React.js, Next.js, NestJS, Web3, and secure software development with strong interest in blockchain and AI-driven systems.
+
+% ==============================================================================
+% SKILLS
+% ==============================================================================
+\cvsection{Skills}
+\noindent\textbf{Languages:} JavaScript, TypeScript, Solidity, Python, Dart, Java, C \\
+\textbf{Frameworks:} React.js, Next.js, Angular.js, Flutter, Node.js, NestJS, Svelte, Web3.js, Ethers.js \\
+\textbf{Blockchain:} Ethereum, Solana, Polygon, BSV, Monad, Smart Contracts, DeFi Protocols \\
+\textbf{Tools:} MongoDB, PostgreSQL, Git, Docker, Linux, Google Cloud, Swagger, Pinata, IPFS \\
+\textbf{Other:} API Integration, Automation, Cybersecurity, Vulnerability Assessment
+
+% ==============================================================================
+% WORK EXPERIENCE (Page 1)
+% ==============================================================================
+\cvsection{Work Experience}
+
+\noindent \textbf{Full Stack Developer} \hfill \textbf{Mar 2026 -- Present} \\
+\textit{Webyalaya} \hfill \textit{Remote}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+  \item Developed and maintained the complete mobile application utilizing Expo, integrating Polygon, Monad, and BSV blockchain networks
+  \item Worked on website bug fixes, feature development, Azure-based deployment, and codebase improvements using MongoDB, Pinata, Git, Linux, and Google Cloud
+\end{itemize}
+\vspace{2.5pt}
+
+\noindent \textbf{Software Engineer Intern} \hfill \textbf{Jun -- Oct 2026} \\
+\textit{Chiranjiv} \hfill \textit{Remote}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+  \item Developed and maintained backend APIs and DevOps data pipelines for processing patient blood and DNA diagnostic output engines
+  \item Built responsive web portals for partner hospitals, clinicians (doctors), and call-center teams to satisfy business requirements
+  \item Implemented feature updates and authored technical documentation detailing end-to-end data flows across ClickHouse, MongoDB, PostgreSQL, and company on-premise servers
+\end{itemize}
+\vspace{2.5pt}
+
+\noindent \textbf{Technical Intern} \hfill \textbf{Feb -- Apr 2026} \\
+\textit{Estah Society} \hfill \textit{Hyderabad, Hybrid}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+  \item Worked on the company's WordPress website and rebuilt an initiative website completely on NestJS
+  \item Successfully identified and resolved a security hack on the main organization website, restoring operational integrity
+\end{itemize}
+\vspace{2.5pt}
+
+\noindent \textbf{Gen AI Full Stack Developer} \hfill \textbf{Dec 2025 -- Present} \\
+\textit{DVK Communications} \hfill \textit{Remote}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+  \item Developing production-grade Gen AI-powered full-stack applications leveraging cutting-edge AI technologies
+  \item Building scalable backend services and responsive frontend interfaces for AI-driven solutions
+\end{itemize}
+\vspace{2.5pt}
+
+\noindent \textbf{Uniswap Hook Incubator Trainee} \hfill \textbf{Oct 2025 -- Present} \\
+\textit{Atrium Academy} \hfill \textit{Remote}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+  \item Building DeFi infrastructure and Uniswap ecosystem tools for decentralized finance protocols
+  \item Developing custom hooks and integrations for automated market maker (AMM) functionality
+\end{itemize}
+
+\newpage
+% ==============================================================================
+% WORK EXPERIENCE (Page 2 continued)
+% ==============================================================================
+\noindent \textbf{Software Developer} \hfill \textbf{Oct -- Nov 2025} \\
+\textit{GoodBreach} \hfill \textit{Remote}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+  \item Contributed to application growth from MVP to product stage by developing core Android features using Flutter
+  \item Built and optimized full-stack functionalities using Flutter/Dart frontend and Next.js/MongoDB backend
+\end{itemize}
+\vspace{2.5pt}
+
+\noindent \textbf{Software Developer Intern} \hfill \textbf{Aug -- Oct 2025} \\
+\textit{Coforge} \hfill \textit{Greater Noida, On-site}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+  \item Contributed to development and maintenance of Bata's e-commerce platform built on Java Spring framework
+  \item Identified and documented critical bugs; collaborated with team to implement fixes improving site performance
+\end{itemize}
+\vspace{2.5pt}
+
+\noindent \textbf{G\&PS DGA Intern} \hfill \textbf{May -- Jul 2025} \\
+\textit{KPMG India} \hfill \textit{New Delhi, On-site}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+  \item Contributed to State Revenue Analytics Dashboard through data analysis and internal documentation
+  \item Prepared detailed RFPs and client presentations, supporting strategic discussions for project acquisition
+\end{itemize}
+\vspace{2.5pt}
+
+\noindent \textbf{Squad Member} \hfill \textbf{Oct 2024 -- May 2025} \\
+\textit{Snowflake} \hfill \textit{Hyderabad}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+  \item Earned Snowflake Developer Badges through active ecosystem contributions and community participation
+  \item Delivered blockchain and data engineering contributions to enhance platform capabilities
+\end{itemize}
+\vspace{2.5pt}
+
+\noindent \textbf{Blockchain Developer} \hfill \textbf{Jul 2024 -- May 2025} \\
+\textit{Timechain Labs} \hfill \textit{Remote}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+  \item Developed and deployed smart contracts on BSV Blockchain with Swagger UI integration
+  \item Built responsive frontend with Svelte and scalable backend systems using NestJS
+  \item Led frontend development for Deep Revenue Sharing System MVP, enhancing investor transparency
+\end{itemize}
+\vspace{2.5pt}
+
+\noindent \textbf{Full Stack Developer} \hfill \textbf{2024} \\
+\textit{Wallet Hunter Token 2049} \hfill \textit{Remote}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+  \item Engineered Python backend modules for automation; integrated third-party APIs for wallet tracking
+  \item Built user-centric React.js interfaces, improving UX and engagement for Web3 applications
+\end{itemize}
+\vspace{2.5pt}
+
+\noindent \textbf{Evangelist} \hfill \textbf{May -- Oct 2024} \\
+\textit{Oraichain Labs} \hfill \textit{Remote}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+  \item Contributed to core Oraichain protocol with focus on Rust-based smart contracts
+  \item Enhanced developer documentation and onboarding experience for new contributors
+\end{itemize}
+\vspace{2.5pt}
+
+\noindent \textbf{Cybersecurity Intern} \hfill \textbf{2024} \\
+\textit{Threat Prism} \hfill \textit{Remote}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+  \item Conducted vulnerability assessments and collaborated with security teams on risk identification
+\end{itemize}
+
+% ==============================================================================
+% EDUCATION
+% ==============================================================================
+\cvsection{Education}
+
+\noindent \textbf{B.Tech Computer Science \& Engineering (Hons.)} \hfill \textbf{CGPA: 9.44} \\
+\textit{KL University, Hyderabad} \hfill \textit{2022 -- 2026 (Expected)} \\[4pt]
+\noindent \textbf{12th Grade (CBSE)} -- Gopi Birla Memorial School, Mumbai \\[2pt]
+\noindent \textbf{10th Grade (CBSE)} -- Orchids International School, Mumbai
+
+% ==============================================================================
+% ACHIEVEMENTS
+% ==============================================================================
+\cvsection{Achievements}
+
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt, parsep=0pt, topsep=2pt]
+  \item RootStock Blockchain Hackathon -- 1st Place
+  \item Monad Blockchain Hackathon -- 2nd Place
+  \item Impact Tech Hackathon -- 1st Place (2x Winner)
+  \item Ripple Hackathon, IIT Bombay -- Runner Up (Top 5)
+  \item Omi Tech Hackathon -- Runner Up
+  \item Jupiverse Hackathon -- 6th Place
+\end{itemize}
+
+\newpage
+% ==============================================================================
+% CERTIFICATIONS (Page 3)
+% ==============================================================================
+\cvsection{Certifications}
+
+\certentry{badge_ceh.png}%
+  {CEH (Certified Ethical Hacker)}%
+  {Mar 2025 -- Apr 2026}%
+  {EC-Council}%
+  {Certification No: ECC2095361874}%
+  {Ethical Hacking, Penetration Testing, Network Security, Vulnerability Assessment, Cybersecurity}%
+  {\\[1pt]\scriptsize\texttt{\href{https://aspen.eccouncil.org/verify}{aspen.eccouncil.org/verify -- Cert: ECC2095361874}}}
+
+\certentry{badge_aa_advanced.png}%
+  {Advanced Automation Professional Certification}%
+  {Sep 2024 -- Sep 2026}%
+  {Automation Anywhere}%
+  {Credential ID: 5d12eab7}%
+  {RPA, Automation 360, Business Process Automation, Bot Development, Enterprise Automation}%
+  {\\[1pt]\scriptsize\texttt{\href{https://credential.net/5d12eab7-9adf-4dbf-af07-92869f2917c6}{credential.net/5d12eab7-9adf-4dbf-af07-92869f2917c6}}}
+
+\certentry{badge_aa_essentials.png}%
+  {Essentials Automation Certification}%
+  {Sep 2024 -- Sep 2026}%
+  {Automation Anywhere}%
+  {Credential ID: 6e42e815}%
+  {Intelligent Automation, RPA Fundamentals, Automation Basics, Process Automation}%
+  {\\[1pt]\scriptsize\texttt{\href{https://credential.net/6e42e815-2b49-4ffb-9e32-ce51457fb9d0}{credential.net/6e42e815-2b49-4ffb-9e32-ce51457fb9d0}}}
+
+\certentry{badge_fortinet_associate.png}%
+  {Fortinet Certified Associate Cybersecurity}%
+  {Oct 2024 -- Oct 2026}%
+  {Fortinet}%
+  {Credential ID: 95ac470f}%
+  {Authentication, Cybersecurity, VPN, Firewall, FortiGate, IDS, SSL Inspection}%
+  {\\[1pt]\scriptsize\texttt{\href{https://www.credly.com/badges/95ac470f-0f51-494e-8e41-aef81ec28488}{credly.com/badges/95ac470f-0f51-494e-8e41-aef81ec28488}}}
+
+\certentry{badge_fortigate_operator.png}%
+  {Fortinet FortiGate 7.4 Operator}%
+  {Oct 2024 -- No Expiry}%
+  {Fortinet (NSE Exam)}%
+  {Credential ID: 717dde4e}%
+  {Authentication, Antivirus, Application Control, Firewall, FortiOS, IPS, VPN}%
+  {\\[1pt]\scriptsize\texttt{\href{https://www.credly.com/badges/717dde4e-de04-414d-8150-9d76828aa6c8}{credly.com/badges/717dde4e-de04-414d-8150-9d76828aa6c8}}}
+
+\certentry{badge_redhat.png}%
+  {Red Hat Certified Enterprise Application Developer}%
+  {Jun 2024 -- Jun 2027}%
+  {Red Hat}%
+  {Credential ID: 81151611}%
+  {Java Enterprise Edition (JEE), Enterprise Application Development}%
+  {\\[1pt]\scriptsize\texttt{\href{https://www.credly.com/badges/81151611-6cf3-4aa3-9a09-80296e365cd7}{credly.com/badges/81151611-6cf3-4aa3-9a09-80296e365cd7}}}
+
+\certentry{badge_aws_cloud_practitioner.png}%
+  {AWS Certified Cloud Practitioner}%
+  {Nov 2025 -- Nov 2028}%
+  {Amazon Web Services (Foundational)}%
+  {Credential ID: b5a80f9a}%
+  {Cloud Computing, AWS, Cloud Services, Cloud Platform, AWS Certification}%
+  {\\[1pt]\scriptsize\texttt{\href{https://www.credly.com/badges/b5a80f9a-a8dd-4228-81dd-04b350ae8870}{credly.com/badges/b5a80f9a-a8dd-4228-81dd-04b350ae8870}}}
+
+\certentry{badge_ccna.png}%
+  {CCNA: Introduction to Networks}%
+  {Feb 2025 -- No Expiry}%
+  {Cisco Networking Academy (Verified)}%
+  {Credential ID: 4633adb5}%
+  {Ethernet, IP Connectivity, Subnetting, IPv4/IPv6, Network Fundamentals, Switching}%
+  {\\[1pt]\scriptsize\texttt{\href{https://www.credly.com/badges/4633adb5-1da4-4281-aa06-f35a396f7a46}{credly.com/badges/4633adb5-1da4-4281-aa06-f35a396f7a46}}}
+
+\newpage
+% ==============================================================================
+% CERTIFICATIONS (Page 4 continued)
+% ==============================================================================
+\certentry{badge_aws_genai.png}%
+  {AWS Educate Introduction to Generative AI}%
+  {Apr 2025 -- No Expiry}%
+  {Amazon Web Services (Trained)}%
+  {Credential ID: 064b1d9b}%
+  {AWS, Generative AI, AI/ML on AWS (Foundational), AWS Cloud}%
+  {\\[1pt]\scriptsize\texttt{\href{https://www.credly.com/badges/064b1d9b-94fc-4443-afc8-d7ad594a2d38}{credly.com/badges/064b1d9b-94fc-4443-afc8-d7ad594a2d38}}}
+
+\certentry{badge_oracle_foundations.jpg}%
+  {Oracle Cloud Infrastructure 2025 Foundations Associate}%
+  {Oct 2025}%
+  {Oracle Certified}%
+  {Credential ID: 1Z0-1085-25}%
+  {OCI, Cloud Infrastructure, Oracle Cloud, Cloud Computing, IaaS, PaaS}%
+  {}
+
+\certentry{badge_oracle_ai.jpg}%
+  {Oracle Cloud Infrastructure 2025 AI Foundations Associate}%
+  {Oct 2025}%
+  {Oracle Certified}%
+  {Credential ID: 1Z0-1122-25}%
+  {OCI AI Services, Machine Learning, AI Foundations, Oracle Cloud, Generative AI}%
+  {}
+
+\certentry{badge_aws_security.png}%
+  {AWS Academy Cloud Security Builder}%
+  {Apr 2025 -- No Expiry}%
+  {Amazon Web Services (Trained)}%
+  {Credential ID: be64a166}%
+  {Data Security, Encryption, Network Security, AWS KMS, CloudWatch, EBS}%
+  {\\[1pt]\scriptsize\texttt{\href{https://www.credly.com/badges/be64a166-e095-4eb4-8242-f0ebc8b217bf}{credly.com/badges/be64a166-e095-4eb4-8242-f0ebc8b217bf}}}
+
+\certentry{badge_lifelong_learning.png}%
+  {Lifelong Learning (LLLC)}%
+  {Oct 2024 -- No Expiry}%
+  {Certiprof (Continuous Learner)}%
+  {Credential ID: e068cdac}%
+  {Career Development, Lifelong Learning, Growth Mindset, Ethics, Professionalism}%
+  {\\[1pt]\scriptsize\texttt{\href{https://www.credly.com/badges/e068cdac-c2da-40b8-858e-341efe52fb4a}{credly.com/badges/e068cdac-c2da-40b8-858e-341efe52fb4a}}}
+
+\certentry{badge_google_cloud.png}%
+  {Google Cloud Engineering Certificate}%
+  {Mar 2025 -- No Expiry}%
+  {Google Cloud}%
+  {Credential ID: 06966232}%
+  {GCP, Compute Engine, Cloud Storage, Kubernetes, Vertex AI, VPC, DevOps}%
+  {\\[1pt]\scriptsize\texttt{\href{https://www.credly.com/badges/06966232-376b-464c-b21c-43e67ff0ccb6}{credly.com/badges/06966232-376b-464c-b21c-43e67ff0ccb6}}}
+
+\certentry{badge_postman.png}%
+  {Postman API Fundamentals Student Expert}%
+  {Mar 2024 -- No Expiry}%
+  {Postman}%
+  {Completed: Mar 29, 2024}%
+  {API Fundamentals, REST APIs, API Testing, Postman Collections, API Documentation}%
+  {}
+
+% ==============================================================================
+% PROJECTS (Page 4)
+% ==============================================================================
+\cvsection{Projects}
+
+\projectentry{ZK-Proof-of-Compliance-Hook}%
+  {Solidity, Uniswap v4}%
+  {\href{https://github.com/tmanas06/ZK-Proof-of-Compliance-Hook}{github.com/tmanas06/ZK-Proof-of-Compliance-Hook}}%
+  {\item Built Uniswap v4 hook restricting swaps/LP actions to users with zero-knowledge compliance proofs}
+
+\projectentry{ZKWhisper -- Private Messaging}%
+  {TypeScript, ZK-SNARKs}%
+  {\href{https://github.com/tmanas06/ZKWhisper}{github.com/tmanas06/ZKWhisper}}%
+  {\item Developed privacy-focused messaging application using zero-knowledge proofs for encrypted communications}
+
+\projectentry{AiDeFi -- EthGlobal Delhi Hackathon}%
+  {TypeScript, Web3}%
+  {\href{https://github.com/tmanas06/aidefi}{github.com/tmanas06/aidefi}}%
+  {\item Developed AI-powered DeFi application for intelligent trading and portfolio management}
+
+\projectentry{Stacks\_Pay \& AptPay -- Payment Solutions}%
+  {JavaScript, Stacks/Aptos}%
+  {\href{https://github.com/tmanas06/Stacks_Pay}{github.com/tmanas06/Stacks\_Pay} \ \textbar\ \ \href{https://github.com/tmanas06/AptPay}{github.com/tmanas06/AptPay}}%
+  {\item Built cross-chain payment applications on Stacks and Aptos blockchains for seamless crypto transactions}
+
+\projectentry{AlgoHospitConnect -- Healthcare Platform}%
+  {TypeScript, Algorand}%
+  {\href{https://github.com/tmanas06/AlgoHospitConnect}{github.com/tmanas06/AlgoHospitConnect}}%
+  {\item Developed blockchain-based hospital connectivity platform for secure patient data management}
+
+\newpage
+% ==============================================================================
+% PROJECTS (Page 5 continued)
+% ==============================================================================
+\projectentry{Swipe Interview AI}%
+  {TypeScript, AI/ML}%
+  {\href{https://github.com/tmanas06/swipe_interview_ai}{github.com/tmanas06/swipe\_interview\_ai}}%
+  {\item Built AI-powered interview preparation platform with swipe-based UI for practice sessions}
+
+\projectentry{Monad Game -- On-Chain Gaming dApp}%
+  {TypeScript, Monad}%
+  {\href{https://github.com/tmanas06/monad_game}{github.com/tmanas06/monad\_game}}%
+  {\item Built real-time interactive gaming dApp on Monad Blockchain with 3 swipe-based mini-games}
+
+\projectentry{Farcaster Games (Bubble Shooter, Snake)}%
+  {TypeScript, Farcaster}%
+  {\href{https://github.com/tmanas06/Bubble_Shooter}{github.com/tmanas06/Bubble\_Shooter} \ \textbar\ \ \href{https://github.com/tmanas06/snake_game_farcaster}{github.com/tmanas06/snake\_game\_farcaster}}%
+  {\item Developed mini dApps (Frames) for Farcaster social protocol with on-chain leaderboards}
+
+\projectentry{MineSweep Game -- Oasis Hackathon}%
+  {JavaScript, Oasis}%
+  {\href{https://github.com/tmanas06/MineSweepGame_Oasis_hackathon}{github.com/tmanas06/MineSweepGame\_Oasis\_hackathon}}%
+  {\item Created blockchain-based minesweeper game with privacy features using Oasis Network}
+
+\projectentry{GPS-Runner -- Fitness Tracker}%
+  {Dart, Flutter}%
+  {\href{https://github.com/tmanas06/GPS-Runner}{github.com/tmanas06/GPS-Runner}}%
+  {\item Built mobile fitness tracking app with real-time GPS tracking and workout analytics}
+
+\projectentry{Encrypted\_Pad -- Secure Notes}%
+  {TypeScript}%
+  {\href{https://github.com/tmanas06/Encrypted_Pad}{github.com/tmanas06/Encrypted\_Pad}}%
+  {\item Developed encrypted note-taking application with end-to-end encryption for secure data storage}
+
+\projectentry{Home Rental DApp}%
+  {Solidity, React.js}%
+  {\href{https://github.com/tmanas06/Home-Rental-DApp}{github.com/tmanas06/Home-Rental-DApp}}%
+  {\item Delivered decentralized rental platform with smart contract escrow, reducing disputes by 30\%}
+
+\projectentry{Revenue Analytics Dashboard}%
+  {React.js, Python}%
+  {\href{https://github.com/tmanas06/Revenue-Analytics-Dashboard}{github.com/tmanas06/Revenue-Analytics-Dashboard}}%
+  {\item Built scalable dashboard visualizing state-wise revenue data (FY17--FY26) with 99.9\% accuracy}
+
+\projectentry{Wallet\_Dapp -- Web3 Wallet}%
+  {TypeScript, Web3.js}%
+  {\href{https://github.com/tmanas06/Wallet_Dapp}{github.com/tmanas06/Wallet\_Dapp}}%
+  {\item Created non-custodial wallet interface with multi-chain support and transaction management}
+
+\projectentry{Habit Saver}%
+  {Flutter, Dart}%
+  {\href{https://github.com/tmanas06/Habit_saver_flutter}{github.com/tmanas06/Habit\_saver\_flutter}}%
+  {\item Built habit tracking mobile app for daily routine management with progress analytics}
+
+\projectentry{Crypto Market Analysis Tool}%
+  {Python}%
+  {\href{https://github.com/tmanas06/Crypto-Market-Analysis}{github.com/tmanas06/Crypto-Market-Analysis}}%
+  {\item Developed analytics engine for real-time crypto trends with automated SMS/email alerts}
+
+
+% ==============================================================================
+% VOLUNTEERING
+% ==============================================================================
+\cvsection{Volunteering}
+
+
+oindent 	extbf{Contributor} \hfill 	extbf{Oct 2023 -- Present} \
+	extit{Hyderabad DAO} \hfill 	extit{Hyderabad, Telangana, India}
+egin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+  \item Actively contribute to Web3 ecosystem growth, organizing developer meetups, hackathons, and community initiatives
+  \item Facilitate technical workshops and developer onboarding for emerging blockchain protocols and smart contract development
+\end{itemize}
+space{2.5pt}
+
+
+oindent 	extbf{Squad Member} \hfill 	extbf{Oct 2024 -- May 2025} \
+	extit{Snowflake} \hfill 	extit{Hyderabad}
+egin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+  \item Earned Snowflake Developer Badges through active ecosystem contributions and community participation
+  \item Delivered blockchain and data engineering contributions to enhance platform capabilities
+\end{itemize}
+space{2.5pt}
+
+\end{document}
