@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.3)  3 OCT 2026 23:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.3)  4 OCT 2026 00:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -417,70 +417,75 @@ e 306.
  [3 <./images/badge_ceh.png (PNG copy)> <./images/badge_aa_advanced.png (PNG co
 py)> <./images/badge_aa_essentials.png (PNG copy)> <./images/badge_fortinet_ass
 ociate.png> <./images/badge_fortigate_operator.png>]
-<images/badge_redhat.png, id=42, 204.765pt x 204.765pt>
+<images/badge_redis.png, id=42, 200.75pt x 200.75pt>
+File: images/badge_redis.png Graphic file (type png)
+<use images/badge_redis.png>
+Package pdftex.def Info: images/badge_redis.png  used on input line 318.
+(pdftex.def)             Requested size: 61.42929pt x 61.42929pt.
+<images/badge_redhat.png, id=43, 204.765pt x 204.765pt>
 File: images/badge_redhat.png Graphic file (type png)
 <use images/badge_redhat.png>
-Package pdftex.def Info: images/badge_redhat.png  used on input line 318.
+Package pdftex.def Info: images/badge_redhat.png  used on input line 326.
 (pdftex.def)             Requested size: 61.42996pt x 61.42996pt.
-<images/badge_aws_cloud_practitioner.png, id=44, 204.765pt x 204.765pt>
+<images/badge_aws_cloud_practitioner.png, id=45, 204.765pt x 204.765pt>
 File: images/badge_aws_cloud_practitioner.png Graphic file (type png)
 <use images/badge_aws_cloud_practitioner.png>
 Package pdftex.def Info: images/badge_aws_cloud_practitioner.png  used on input
- line 326.
+ line 334.
 (pdftex.def)             Requested size: 61.42996pt x 61.42996pt.
-<images/badge_ccna.png, id=46, 204.765pt x 204.765pt>
+<images/badge_ccna.png, id=47, 204.765pt x 204.765pt>
 File: images/badge_ccna.png Graphic file (type png)
 <use images/badge_ccna.png>
-Package pdftex.def Info: images/badge_ccna.png  used on input line 334.
+Package pdftex.def Info: images/badge_ccna.png  used on input line 342.
 (pdftex.def)             Requested size: 61.42996pt x 61.42996pt.
-<images/badge_aws_genai.png, id=48, 204.765pt x 204.765pt>
+<images/badge_aws_genai.png, id=49, 204.765pt x 204.765pt>
 File: images/badge_aws_genai.png Graphic file (type png)
 <use images/badge_aws_genai.png>
-Package pdftex.def Info: images/badge_aws_genai.png  used on input line 342.
+Package pdftex.def Info: images/badge_aws_genai.png  used on input line 350.
 (pdftex.def)             Requested size: 61.42996pt x 61.42996pt.
-<images/badge_oracle_foundations.jpg, id=50, 415.5525pt x 207.77625pt>
+<images/badge_oracle_foundations.jpg, id=51, 415.5525pt x 207.77625pt>
 File: images/badge_oracle_foundations.jpg Graphic file (type jpg)
 <use images/badge_oracle_foundations.jpg>
 Package pdftex.def Info: images/badge_oracle_foundations.jpg  used on input lin
-e 350.
+e 358.
 (pdftex.def)             Requested size: 66.40099pt x 33.20049pt.
-<images/badge_oracle_ai.jpg, id=51, 415.5525pt x 207.77625pt>
+<images/badge_oracle_ai.jpg, id=52, 415.5525pt x 207.77625pt>
 File: images/badge_oracle_ai.jpg Graphic file (type jpg)
 <use images/badge_oracle_ai.jpg>
-Package pdftex.def Info: images/badge_oracle_ai.jpg  used on input line 358.
+Package pdftex.def Info: images/badge_oracle_ai.jpg  used on input line 366.
 (pdftex.def)             Requested size: 66.40099pt x 33.20049pt.
-<images/badge_aws_security.png, id=52, 204.765pt x 204.765pt>
+<images/badge_aws_security.png, id=53, 204.765pt x 204.765pt>
 File: images/badge_aws_security.png Graphic file (type png)
 <use images/badge_aws_security.png>
-Package pdftex.def Info: images/badge_aws_security.png  used on input line 366.
+Package pdftex.def Info: images/badge_aws_security.png  used on input line 374.
 
 (pdftex.def)             Requested size: 61.42996pt x 61.42996pt.
-<images/badge_lifelong_learning.png, id=54, 204.765pt x 204.765pt>
+<images/badge_lifelong_learning.png, id=55, 204.765pt x 204.765pt>
 File: images/badge_lifelong_learning.png Graphic file (type png)
 <use images/badge_lifelong_learning.png>
 Package pdftex.def Info: images/badge_lifelong_learning.png  used on input line
- 374.
+ 382.
 (pdftex.def)             Requested size: 61.42996pt x 61.42996pt.
-<images/badge_google_cloud.png, id=56, 204.765pt x 204.765pt>
+<images/badge_google_cloud.png, id=57, 204.765pt x 204.765pt>
 File: images/badge_google_cloud.png Graphic file (type png)
 <use images/badge_google_cloud.png>
-Package pdftex.def Info: images/badge_google_cloud.png  used on input line 382.
+Package pdftex.def Info: images/badge_google_cloud.png  used on input line 390.
 
 (pdftex.def)             Requested size: 61.42996pt x 61.42996pt.
-<images/badge_postman.png, id=58, 292.09125pt x 292.09125pt>
+<images/badge_postman.png, id=59, 292.09125pt x 292.09125pt>
 File: images/badge_postman.png Graphic file (type png)
 <use images/badge_postman.png>
-Package pdftex.def Info: images/badge_postman.png  used on input line 390.
+Package pdftex.def Info: images/badge_postman.png  used on input line 398.
 (pdftex.def)             Requested size: 61.42564pt x 61.42564pt.
- [4 <./images/badge_redhat.png> <./images/badge_aws_cloud_practitioner.png> <./
-images/badge_ccna.png> <./images/badge_aws_genai.png> <./images/badge_oracle_fo
-undations.jpg> <./images/badge_oracle_ai.jpg> <./images/badge_aws_security.png>
- <./images/badge_lifelong_learning.png> <./images/badge_google_cloud.png> <./im
-ages/badge_postman.png (PNG copy)>]
+ [4 <./images/badge_redis.png> <./images/badge_redhat.png> <./images/badge_aws_
+cloud_practitioner.png> <./images/badge_ccna.png> <./images/badge_aws_genai.png
+> <./images/badge_oracle_foundations.jpg> <./images/badge_oracle_ai.jpg> <./ima
+ges/badge_aws_security.png> <./images/badge_lifelong_learning.png> <./images/ba
+dge_google_cloud.png> <./images/badge_postman.png (PNG copy)>]
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <10.95> n
 ot available
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 401.
+n input line 409.
  [5] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -490,10 +495,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 12902 strings out of 469006
- 224607 string characters out of 5454813
+ 12909 strings out of 469006
+ 224809 string characters out of 5454813
  618230 words of memory out of 5000000
- 41457 multiletter control sequences out of 15000+600000
+ 41464 multiletter control sequences out of 15000+600000
  656497 words of font info for 72 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  75i,6n,79p,332b,443s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -505,10 +510,10 @@ e1/public/fontawesome5/FontAwesome5Free-Solid.pfb></usr/local/texlive/2026basic
 /texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/texlive/2026bas
 ic/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texlive/2026b
 asic/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb>
-Output written on main.pdf (5 pages, 692834 bytes).
+Output written on main.pdf (5 pages, 705321 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
+ 220 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
  6 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
