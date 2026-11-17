@@ -1,0 +1,182 @@
+\documentclass[11pt,a4paper]{article}
+% Tailored version of main.tex for: Data Lake -- Senior Solidity Engineer (LAKE token & vesting)
+
+% --- Packages ---
+\usepackage[a4paper, top=0.55in, bottom=0.55in, left=0.6in, right=0.6in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{ragged2e}
+
+\pagestyle{plain}
+
+% --- Custom Macros ---
+\newcommand{\cvsection}[1]{%
+  \vspace{6pt}%
+  \noindent{\large\textbf{\MakeUppercase{#1}}}%
+  \vspace{2pt}%
+  \hrule height 0.5pt%
+  \vspace{4pt}%
+}
+
+\newcommand{\job}[4]{%
+  \noindent \textbf{#1} \hfill \textbf{#2} \\
+  \textit{#3} \hfill \textit{#4}%
+}
+
+\newenvironment{cvitems}{%
+  \begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]%
+}{%
+  \end{itemize}\vspace{2.5pt}%
+}
+
+\newcommand{\projectentry}[4]{%
+  \noindent
+  \faGithub\ \textbf{#1} \hfill \textit{#2} \\
+  {\small\texttt{#3}}
+  \begin{itemize}[leftmargin=1.5em, itemsep=0.5pt, parsep=0pt, topsep=1pt]
+    #4
+  \end{itemize}
+  \vspace{2pt}
+}
+
+\begin{document}
+
+% ==============================================================================
+% HEADER
+% ==============================================================================
+\begin{center}
+  {\Huge \textbf{T MANAS CHAKRAVARTY}} \\[3pt]
+  {\large Solidity / Smart Contract Engineer} \\[5pt]
+  \small
+  \faPhone*\ +91-9398264880 \quad \textbar \quad
+  \faEnvelope\ \href{mailto:2210030003cse@gmail.com}{2210030003cse@gmail.com} \quad \textbar \quad
+  \faMapMarker*\ Hyderabad, India (Remote) \\[3pt]
+  \faGlobe\ \href{https://portfolio-tmanas.vercel.app}{portfolio-tmanas.vercel.app} \quad \textbar \quad
+  \faGithub\ \href{https://github.com/tmanas06}{github.com/tmanas06} \quad \textbar \quad
+  \faLinkedin\ \href{https://linkedin.com/in/t-manas-chakravarty-91958224b}{LinkedIn}
+\end{center}
+
+% ==============================================================================
+% SUMMARY
+% ==============================================================================
+\cvsection{Summary}
+\noindent Smart contract engineer with 2+ years of hands-on Solidity across EVM chains, a CEH-certified security background, and a test-first
+approach to value-moving code. I write the contract, the Foundry test suite, and the deployment scripts, and design admin roles to be
+named, bounded, and time-locked. Uniswap Hook Incubator trainee (v4 hooks; v3 pool integration) and builder of token reward, staking, and
+ownership-timelock contracts. Also worked on patient diagnostic data pipelines, so I'm motivated by Data Lake's decentralized-science mission.
+
+% ==============================================================================
+% SKILLS
+% ==============================================================================
+\cvsection{Technical Skills}
+\noindent\textbf{Smart Contracts:} Solidity (0.8.x), Foundry (forge, anvil, forge script), Hardhat, OpenZeppelin (Ownable, ReentrancyGuard, ERC-20/1155) \\
+\textbf{Contract Design:} Token \& reward accounting, staking/epoch release logic, timelocks, role-based access control, event design for indexers \\
+\textbf{DeFi:} Uniswap v3 pool pricing \& liquidity concepts, Uniswap v4 hooks, AMMs, ZK verifiers (Groth16) \\
+\textbf{Security:} Reentrancy \& checks-effects-interactions, privilege/admin-surface review, Solhint, threat modelling, vulnerability assessment (CEH) \\
+\textbf{Chains \& Tooling:} Ethereum, Polygon, Monad, Rootstock, BSV, Solana; Ethers.js, Web3.js, Git, Docker, Linux \\
+\textbf{Off-chain:} TypeScript, Node.js/NestJS, React/Next.js, Python, PostgreSQL, MongoDB, ClickHouse
+
+% ==============================================================================
+% SMART CONTRACT PROJECTS
+% ==============================================================================
+\cvsection{Smart Contract Work}
+
+\projectentry{Ktv2 -- Token Reward Distribution \& Ownership Timelock}%
+  {Solidity 0.8.20, OpenZeppelin, Uniswap v3}%
+  {\href{https://github.com/tmanas06/hiring_challenge}{github.com/tmanas06/hiring\_challenge}}%
+  {\item Built an epoch-gated reward contract: payouts require a quorum of authorised rewarder votes and a completed epoch, so the same epoch cannot be paid twice
+   \item Per-epoch fee accounting moves earned fees into a separate withdrawable balance before any state change; owner setters gated by \texttt{onlyOwner}
+   \item Wrote \texttt{Ktv2OwnershipTimelock}: owner can freeze admin powers for a bounded window (1 hour -- 365 days) with \texttt{ReentrancyGuard} and full event trail
+   \item Read token price from Uniswap v3 pools (v2 fallback) for burn/donation logic; factory contract emits \texttt{Created} events for off-chain indexing}
+
+\projectentry{ZK Proof-of-Compliance Hook -- Uniswap v4}%
+  {Solidity, Foundry, Circom/Groth16, TypeScript}%
+  {\href{https://github.com/tmanas06/ZK-Proof-of-Compliance-Hook}{github.com/tmanas06/ZK-Proof-of-Compliance-Hook}}%
+  {\item Uniswap v4 hook that gates swaps and LP actions on a zero-knowledge compliance proof, with no personal data on-chain
+   \item 6 Foundry test suites (unit, integration, verifier) including negative cases that must revert; Solhint and GitHub Actions in CI
+   \item 20+ \texttt{forge script} deployment / configuration scripts with environment checks, deployed end-to-end on a local Anvil fork with a real Groth16 verifier}
+
+\projectentry{VirtualVerse -- On-Chain Virtual Office (Monad)}%
+  {Solidity, Next.js 14, Ethers.js}%
+  {\href{https://github.com/tmanas06/metaspace}{github.com/tmanas06/metaspace}}%
+  {\item ERC-1155 avatar assets and non-transferable Soulbound badges; wallet signing kept in the client}
+
+\projectentry{AlgoHospitConnect \& Web3 Payments}%
+  {TypeScript, Algorand, Stacks, Aptos}%
+  {\href{https://github.com/tmanas06/AlgoHospitConnect}{AlgoHospitConnect} \ \textbar\ \ \href{https://github.com/tmanas06/Wallet_Dapp}{Wallet\_Dapp} \ \textbar\ \ \href{https://github.com/tmanas06/AptPay}{AptPay}}%
+  {\item Blockchain-based hospital connectivity platform for patient data; non-custodial multi-chain wallets and payment gateways (keys never leave the user)}
+
+% ==============================================================================
+% EXPERIENCE
+% ==============================================================================
+\newpage
+\cvsection{Experience}
+
+\job{Uniswap Hook Incubator Trainee}{Oct 2025 -- Present}{Atrium Academy}{Remote}
+\begin{cvitems}
+  \item Building and testing custom Uniswap hooks and AMM integrations; studying pool, position and liquidity-incentive mechanics end to end
+\end{cvitems}
+
+\job{Full Stack Developer (Web3)}{Mar 2026 -- Present}{Webyalaya}{Remote}
+\begin{cvitems}
+  \item Built the Expo mobile app integrating Polygon, Monad and BSV networks; wallet signing stays on the user's device
+  \item Shipped features and fixes across the web platform with MongoDB, Pinata/IPFS, Azure and Google Cloud deployments
+\end{cvitems}
+
+\job{Blockchain Developer}{Jul 2024 -- May 2025}{Timechain Labs}{Remote}
+\begin{cvitems}
+  \item Developed and deployed smart contracts on BSV with Swagger-documented APIs; NestJS backends and Svelte frontends
+  \item Led frontend for the Deep Revenue Sharing System MVP, exposing on-chain revenue distribution to investors
+\end{cvitems}
+
+\job{Software Engineer Intern}{Jun -- Oct 2026}{Chiranjiv (healthcare diagnostics)}{Remote}
+\begin{cvitems}
+  \item Built backend APIs and data pipelines for patient blood and DNA diagnostic engines; portals for hospitals, clinicians and call centres
+  \item Documented end-to-end data flows across ClickHouse, MongoDB, PostgreSQL and on-prem servers -- relevant to registries and indexer design
+\end{cvitems}
+
+\job{Evangelist / Contributor}{May -- Oct 2024}{Oraichain Labs}{Remote}
+\begin{cvitems}
+  \item Contributed to Rust-based smart contracts in the core protocol; improved developer docs and onboarding
+\end{cvitems}
+
+\job{Technical Intern}{Feb -- Apr 2026}{Estah Society}{Hyderabad, Hybrid}
+\begin{cvitems}
+  \item Investigated and remediated a live compromise of the organisation's website, then rebuilt an initiative site on NestJS
+\end{cvitems}
+
+\job{Cybersecurity Intern}{2024}{Threat Prism}{Remote}
+\begin{cvitems}
+  \item Conducted vulnerability assessments and risk identification with security teams
+\end{cvitems}
+
+\noindent\textbf{Other roles:} Gen AI Full Stack Developer, DVK Communications (Dec 2025 -- Present); Software Developer, GoodBreach (2025);
+Software Developer Intern, Coforge (2025); G\&PS DGA Intern, KPMG India (2025); Full Stack Developer, Wallet Hunter Token 2049 (2024).
+
+% ==============================================================================
+% ACHIEVEMENTS
+% ==============================================================================
+\cvsection{Hackathons}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]
+  \item Monad Blockchain Hackathon -- 1st Place (Delhi V4), 2nd Place (Hyderabad V4), Runner Up (Delhi V5)
+  \item RootStock (EVM) Blockchain Hackathon -- 1st Place \quad\textbar\quad Ripple Hackathon, IIT Bombay -- Top 5
+  \item EthGlobal Delhi -- AiDeFi; Impact Tech Hackathon -- 1st Place (2x)
+\end{itemize}
+
+% ==============================================================================
+% EDUCATION & CERTIFICATIONS
+% ==============================================================================
+\cvsection{Education \& Certifications}
+\noindent \textbf{B.Tech (Hons.), Computer Science \& Engineering -- Cybersecurity \& Blockchain} \hfill \textbf{CGPA: 9.44} \\
+\textit{KL University, Hyderabad} \hfill \textit{2022 -- 2026} \\[4pt]
+\noindent \textbf{CEH -- Certified Ethical Hacker}, EC-Council (ECC2095361874) \textbar\
+\textbf{Fortinet Certified Associate Cybersecurity} \textbar\
+\textbf{AWS Certified Cloud Practitioner} \textbar\
+\textbf{AWS Academy Cloud Security Builder} \textbar\
+\textbf{Red Hat Certified Enterprise Application Developer}
+
+\end{document}

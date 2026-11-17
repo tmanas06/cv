@@ -1,0 +1,184 @@
+\documentclass[11pt,a4paper]{article}
+% Tailored version of main.tex for: Junior AI Engineer (generic)
+
+% --- Packages ---
+\usepackage[a4paper, top=0.55in, bottom=0.55in, left=0.6in, right=0.6in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{ragged2e}
+% minimal \needspace (keeps a project entry from splitting across pages)
+\makeatletter
+\newcommand{\needspace}[1]{\par\penalty-100\begingroup\setlength{\dimen@}{#1}%
+  \dimen@ii\pagegoal\advance\dimen@ii-\pagetotal
+  \ifdim\dimen@>\dimen@ii\ifdim\dimen@ii>\z@\vfil\fi\break\fi\endgroup}
+\makeatother
+
+\pagestyle{plain}
+
+% --- Custom Macros ---
+\newcommand{\cvsection}[1]{%
+  \vspace{6pt}%
+  \noindent{\large\textbf{\MakeUppercase{#1}}}%
+  \vspace{2pt}%
+  \hrule height 0.5pt%
+  \vspace{4pt}%
+}
+
+\newcommand{\job}[4]{%
+  \noindent \textbf{#1} \hfill \textbf{#2} \\
+  \textit{#3} \hfill \textit{#4}%
+}
+
+\newenvironment{cvitems}{%
+  \begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]%
+}{%
+  \end{itemize}\vspace{2.5pt}%
+}
+
+\newcommand{\projectentry}[4]{%
+  \par\needspace{4\baselineskip}\noindent
+  \faGithub\ \textbf{#1} \hfill \textit{#2} \\
+  {\small\texttt{#3}}
+  \begin{itemize}[leftmargin=1.5em, itemsep=0.5pt, parsep=0pt, topsep=1pt]
+    #4
+  \end{itemize}
+  \vspace{2pt}
+}
+
+\begin{document}
+
+% ==============================================================================
+% HEADER
+% ==============================================================================
+\begin{center}
+  {\Huge \textbf{T MANAS CHAKRAVARTY}} \\[3pt]
+  {\large Junior AI Engineer -- LLM Applications \& Agents} \\[5pt]
+  \small
+  \faPhone*\ +91-9398264880 \quad \textbar \quad
+  \faEnvelope\ \href{mailto:2210030003cse@gmail.com}{2210030003cse@gmail.com} \quad \textbar \quad
+  \faMapMarker*\ Hyderabad, India (open to relocation / remote) \\[3pt]
+  \faGlobe\ \href{https://portfolio-tmanas.vercel.app}{portfolio-tmanas.vercel.app} \quad \textbar \quad
+  \faGithub\ \href{https://github.com/tmanas06}{github.com/tmanas06} \quad \textbar \quad
+  \faLinkedin\ \href{https://linkedin.com/in/t-manas-chakravarty-91958224b}{LinkedIn}
+\end{center}
+
+% ==============================================================================
+% SUMMARY
+% ==============================================================================
+\cvsection{Summary}
+\noindent AI engineer and 2026 B.Tech CSE (Hons.)\ graduate (CGPA 9.44) who builds and ships LLM-powered products end to end: multi-agent
+orchestration, RAG over structured data, model routing with fallback, and local inference pipelines. Experienced in
+building production Gen AI applications. Comfortable across Python/FastAPI backends, TypeScript/Next.js frontends, and cloud deployment, with
+classical ML foundations (scikit-learn) and certifications in AWS and Oracle AI.
+
+% ==============================================================================
+% SKILLS
+% ==============================================================================
+\cvsection{Technical Skills}
+\noindent\textbf{LLMs \& Models:} Claude (Anthropic), Llama 3 (Groq), Gemini, OpenRouter, Ollama (Qwen 2.5, Phi-4-mini, Gemma 3), Stable Diffusion, Piper TTS \\
+\textbf{AI Engineering:} Prompt engineering, structured outputs, RAG, multi-agent orchestration, tool use with permissions, model routing \& fallback, streaming (SSE/WebSockets), MCP basics \\
+\textbf{Machine Learning:} Python, NumPy, pandas, scikit-learn (regression, KNN, SVM, k-means, hierarchical clustering), Matplotlib, Jupyter \\
+\textbf{Backend \& Data:} FastAPI, Pydantic, Node.js, NestJS, REST APIs, PostgreSQL, MongoDB, Redis, SQLite, ClickHouse \\
+\textbf{Frontend:} TypeScript, React, Next.js, Tailwind CSS \\
+\textbf{Cloud \& Tools:} AWS, Google Cloud, Azure, Vercel, Docker, Linux, Git, FFmpeg, Claude Code
+
+% ==============================================================================
+% PROJECTS
+% ==============================================================================
+\cvsection{AI Projects}
+
+\projectentry{AI Workforce -- Multi-Agent Orchestration Platform}%
+  {Python, FastAPI, WebSockets, SQLite, React}%
+  {\href{https://github.com/tmanas06/ai-workforce}{github.com/tmanas06/ai-workforce}}%
+  {\item Local-first platform where specialised agents (Orchestrator, Architect, Researcher, Developer, QA, Reviewer) split projects into dependent tasks and run them in parallel
+   \item Provider abstraction over OpenRouter, Gemini, Ollama and OpenAI-compatible APIs with automatic model fallback and API-key failover
+   \item Terminal, filesystem and Git tools behind a permission system; persistent project and agent memory in SQLite; live status over WebSockets}
+
+\projectentry{Local AI Gateway -- Self-Hosted LLM Routing Proxy}%
+  {Python, FastAPI, Redis, MongoDB, Next.js}%
+  {\href{https://github.com/tmanas06/local-ai-gateway}{github.com/tmanas06/local-ai-gateway}}%
+  {\item OpenAI-compatible \texttt{/v1/chat/completions} proxy that routes each prompt to the right local model (e.g.\ code to \texttt{qwen2.5-coder}, light chat to \texttt{phi4-mini})
+   \item Per-organisation hashed API keys with Redis sliding-window rate limits; logs latency, prompt size and token output per request to MongoDB
+   \item Admin dashboard for request volume, per-model usage and host health; pytest tests; Docker Compose deployment}
+
+\projectentry{HealthTrack AI -- ML Symptom Assessment App}%
+  {Python, scikit-learn, FastAPI, Next.js}%
+  {\href{https://github.com/tmanas06/HealthTrack-AI}{github.com/tmanas06/HealthTrack-AI}}%
+  {\item Trained a Random Forest (with a Logistic Regression baseline) to predict 41 diseases from 131 symptoms on a public Kaggle dataset
+   \item Audited the data first: 4,616 of 4,920 rows were duplicates, so I deduplicated to 304 unique records before a stratified 80/20 split to avoid train/test leakage, and documented the dataset's limits
+   \item FastAPI service returns ranked conditions with vote fractions and precautions, plus an urgent-symptom safety check that runs independently of the model
+   \item Thread-safe LRU cache keyed on symptom set and model version; Pydantic schemas; pytest and Vitest suites; Next.js + Tailwind frontend}
+
+\projectentry{StoryToReel AI -- Offline Generative Video Pipeline}%
+  {Python, Ollama, Stable Diffusion, FFmpeg}%
+  {\href{https://github.com/tmanas06/NovelToVideo}{github.com/tmanas06/NovelToVideo}}%
+  {\item Turns stories into short-form reels: LLM storyboard extraction, styled Stable Diffusion prompts, offline TTS narration, camera motion and burned-in captions
+   \item SQLite-backed sequential job queue running in about 700 MB of RAM, batch processing, and a live progress dashboard over SSE}
+
+\projectentry{MigrateAI -- AI Code Migration Tool (Boring AI Hackathon 2026)}%
+  {Next.js, TypeScript, Claude API}%
+  {\href{https://github.com/tmanas06/migrate-ai}{github.com/tmanas06/migrate-ai} \ \textbar\ \ \href{https://migrate-ai-seven.vercel.app}{migrate-ai-seven.vercel.app}}%
+  {\item Takes a GitHub repo URL and combines AST-based codemods with Claude analysis to produce migrated code, side-by-side diffs and PR-ready patches}
+
+\projectentry{ChaatwalaGPT -- Persona Chat with Generative UI}%
+  {Next.js 14, Groq Llama 3 70B, SSE}%
+  {\href{https://github.com/tmanas06/ChaatwalaGPT}{github.com/tmanas06/ChaatwalaGPT} \ \textbar\ \ \href{https://chaatwala-gpt.vercel.app}{chaatwala-gpt.vercel.app}}%
+  {\item System prompt makes the model emit tagged markdown, which a streaming parser turns into recipe cards and clickable action buttons in real time}
+
+% ==============================================================================
+% EXPERIENCE
+% ==============================================================================
+\cvsection{Experience}
+
+\job{Full Stack Developer}{Mar 2026 -- Present}{Webyalaya}{Remote}
+\begin{cvitems}
+  \item Own the Expo mobile app end to end, integrating Polygon, Monad and BSV networks
+  \item Handle feature work, production fixes and Azure / Google Cloud deployments with MongoDB, Pinata, Git and Linux
+\end{cvitems}
+
+\job{Software Engineer Intern}{Jun -- Oct 2026}{Chiranjiv}{Remote}
+\begin{cvitems}
+  \item Built backend APIs and data pipelines that process output from blood and DNA diagnostic engines
+  \item Documented end-to-end data flows across ClickHouse, MongoDB, PostgreSQL and on-prem servers; built portals for hospitals and clinicians
+\end{cvitems}
+
+\job{Gen AI Full Stack Developer}{Dec 2025 -- Present}{DVK Communications}{Remote}
+\begin{cvitems}
+  \item Build production Gen AI applications end to end: LLM-backed backend services and APIs plus the interfaces that use them
+\end{cvitems}
+
+\job{Software Developer Intern}{Aug -- Oct 2025}{Coforge}{Greater Noida, On-site}
+\begin{cvitems}
+  \item Worked on development and maintenance of Bata's e-commerce platform built on Java Spring
+  \item Found and documented critical bugs, then worked with the team on fixes that improved site performance
+\end{cvitems}
+
+\job{G\&PS DGA Intern}{May -- Jul 2025}{KPMG India}{New Delhi, On-site}
+\begin{cvitems}
+  \item Contributed data analysis and internal documentation to a State Revenue Analytics Dashboard
+  \item Prepared RFPs and client presentations supporting project acquisition
+\end{cvitems}
+
+\noindent\textbf{Also:} Uniswap Hook Incubator, Atrium Academy (2025 -- present); Software Developer, GoodBreach (2025);
+Technical Intern, Estah Society (2026); Cybersecurity Intern, Threat Prism (2024).
+
+% ==============================================================================
+% EDUCATION, CERTS, ACHIEVEMENTS
+% ==============================================================================
+\cvsection{Education}
+\noindent \textbf{B.Tech (Hons.), Computer Science \& Engineering} \hfill \textbf{CGPA: 9.44} \\
+\textit{KL University, Hyderabad} \hfill \textit{2022 -- 2026}
+
+\cvsection{Certifications}
+\noindent Oracle Cloud Infrastructure 2025 AI Foundations Associate \textbar\ AWS Educate Introduction to Generative AI \textbar\
+AWS Certified Cloud Practitioner \textbar\ Google Cloud Engineering Certificate \textbar\ Redis Associate Cloud Operator \textbar\
+CEH -- Certified Ethical Hacker (EC-Council)
+
+\cvsection{Achievements}
+\noindent 9 hackathon awards, including 1st Place at Monad Hackathon Delhi V4, RootStock Hackathon and Impact Tech Hackathon (2x); Top 5 at Ripple Hackathon, IIT Bombay; built AiDeFi (AI-driven DeFi assistant) at ETHGlobal New Delhi.
+
+\end{document}

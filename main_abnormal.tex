@@ -1,0 +1,176 @@
+\documentclass[11pt,a4paper]{article}
+% Tailored version of main.tex for: Abnormal AI -- Software Engineer I, Backend (Config Platform, MPP)
+
+% --- Packages ---
+\usepackage[a4paper, top=0.55in, bottom=0.55in, left=0.6in, right=0.6in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{ragged2e}
+
+\pagestyle{plain}
+
+% --- Custom Macros ---
+\newcommand{\cvsection}[1]{%
+  \vspace{6pt}%
+  \noindent{\large\textbf{\MakeUppercase{#1}}}%
+  \vspace{2pt}%
+  \hrule height 0.5pt%
+  \vspace{4pt}%
+}
+
+\newcommand{\job}[4]{%
+  \noindent \textbf{#1} \hfill \textbf{#2} \\
+  \textit{#3} \hfill \textit{#4}%
+}
+
+\newenvironment{cvitems}{%
+  \begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=1.5pt]%
+}{%
+  \end{itemize}\vspace{2.5pt}%
+}
+
+\newcommand{\projectentry}[4]{%
+  \noindent
+  \faGithub\ \textbf{#1} \hfill \textit{#2} \\
+  {\small\texttt{#3}}
+  \begin{itemize}[leftmargin=1.5em, itemsep=0.5pt, parsep=0pt, topsep=1pt]
+    #4
+  \end{itemize}
+  \vspace{2pt}
+}
+
+\begin{document}
+
+% ==============================================================================
+% HEADER
+% ==============================================================================
+\begin{center}
+  {\Huge \textbf{T MANAS CHAKRAVARTY}} \\[3pt]
+  {\large Backend Software Engineer} \\[5pt]
+  \small
+  \faPhone*\ +91-9398264880 \quad \textbar \quad
+  \faEnvelope\ \href{mailto:2210030003cse@gmail.com}{2210030003cse@gmail.com} \quad \textbar \quad
+  \faMapMarker*\ Hyderabad, India (open to Bangalore, Hybrid) \\[3pt]
+  \faGlobe\ \href{https://portfolio-tmanas.vercel.app}{portfolio-tmanas.vercel.app} \quad \textbar \quad
+  \faGithub\ \href{https://github.com/tmanas06}{github.com/tmanas06} \quad \textbar \quad
+  \faLinkedin\ \href{https://linkedin.com/in/t-manas-chakravarty-91958224b}{LinkedIn}
+\end{center}
+
+% ==============================================================================
+% SUMMARY
+% ==============================================================================
+\cvsection{Summary}
+\noindent Backend engineer (B.Tech CSE Hons., 2026, CGPA 9.44) with 2+ years across remote, distributed teams building REST APIs,
+data pipelines and cloud deployments in Python, TypeScript/Node.js and Java. I've owned features end to end, from design and code to tests,
+release and production fixes, and I write things down: API docs and data-flow documentation. I use AI tools such as Claude Code every day
+and build LLM-backed services. I hold a CEH certification and care about building reliable, secure platform foundations that other teams depend on.
+
+% ==============================================================================
+% SKILLS
+% ==============================================================================
+\cvsection{Technical Skills}
+\noindent\textbf{Languages:} Python, TypeScript/JavaScript, Java, SQL, Solidity, C \\
+\textbf{Backend:} FastAPI, Pydantic, Node.js, NestJS, Flask, Java Spring, REST API design, OpenAPI/Swagger, async I/O, WebSockets \\
+\textbf{Data:} PostgreSQL, MongoDB, Redis, ClickHouse, SQLite; schema design, caching, rate limiting, ETL/data pipelines \\
+\textbf{Cloud \& Ops:} AWS (Certified Cloud Practitioner), Google Cloud, Azure, Docker, Docker Compose, Linux, Git, CI with GitHub Actions \\
+\textbf{Platform Concepts:} Multi-tenant API keys \& per-tenant limits, typed env-based configuration, provider routing \& fallback, structured request logging \\
+\textbf{AI Tooling:} Claude Code, LLM APIs (OpenAI-compatible, Gemini, OpenRouter, Ollama), agent orchestration, prompt-based routing
+
+% ==============================================================================
+% PROJECTS
+% ==============================================================================
+\cvsection{Projects}
+
+\projectentry{Local AI Gateway -- Self-Hosted LLM Routing Proxy}%
+  {Python, FastAPI, Redis, MongoDB, Docker}%
+  {\href{https://github.com/tmanas06/local-ai-gateway}{github.com/tmanas06/local-ai-gateway}}%
+  {\item OpenAI-compatible \texttt{/v1/chat/completions} API in async FastAPI, routing each request to a model by prompt content or explicit provider prefix
+   \item Per-organisation API keys (SHA-256 hashed) with configurable per-key rate limits enforced by a Redis sliding window: tenant-scoped configuration
+   \item Typed, env-driven settings with Pydantic (defaults for routing, limits and backends); admin API to create and revoke keys
+   \item Logs each request's latency, token counts and status to MongoDB asynchronously; Next.js admin dashboard; pytest tests; Docker Compose stack}
+
+\projectentry{AI Workforce -- Multi-Agent Orchestration Platform}%
+  {Python, FastAPI, WebSockets, SQLite, React}%
+  {\href{https://github.com/tmanas06/ai-workforce}{github.com/tmanas06/ai-workforce}}%
+  {\item Backend that splits work into hierarchical tasks with dependencies, runs them in parallel across agent roles, and streams status over WebSockets
+   \item Provider abstraction (OpenRouter, Gemini, Ollama, OpenAI-compatible) with automatic fallback and API-key failover; tool calls gated by a permission system}
+
+\projectentry{StoryToReel AI -- Local Content Pipeline}%
+  {Python, FastAPI, FFmpeg, Ollama}%
+  {\href{https://github.com/tmanas06/NovelToVideo}{github.com/tmanas06/NovelToVideo}}%
+  {\item Multi-stage offline pipeline (LLM scripting, image generation, TTS, FFmpeg rendering) turning text into short-form video}
+
+\projectentry{ZK Proof-of-Compliance Hook}%
+  {Solidity, Foundry, TypeScript}%
+  {\href{https://github.com/tmanas06/ZK-Proof-of-Compliance-Hook}{github.com/tmanas06/ZK-Proof-of-Compliance-Hook}}%
+  {\item Policy-gated access control using zero-knowledge proofs; 6 test suites, 20+ scripted deployments, and CI}
+
+% ==============================================================================
+% EXPERIENCE
+% ==============================================================================
+\newpage
+\cvsection{Experience}
+
+\job{Software Engineer Intern}{Jun -- Oct 2026}{Chiranjiv}{Remote}
+\begin{cvitems}
+  \item Built and maintained backend APIs and data pipelines serving blood and DNA diagnostic engines in production
+  \item Shipped web portals for partner hospitals, clinicians and call-centre teams, working from business requirements to release
+  \item Wrote the technical documentation for end-to-end data flows across ClickHouse, MongoDB, PostgreSQL and on-prem servers
+\end{cvitems}
+
+\job{Full Stack Developer}{Mar 2026 -- Present}{Webyalaya}{Remote}
+\begin{cvitems}
+  \item Own the Expo mobile app end to end, including its integrations with external network APIs (Polygon, Monad, BSV)
+  \item Balance feature work with operational tasks: production bug fixes, Azure deployments and codebase improvements with MongoDB, Google Cloud and Linux
+\end{cvitems}
+
+\job{Gen AI Full Stack Developer}{Dec 2025 -- Present}{DVK Communications}{Remote}
+\begin{cvitems}
+  \item Build backend services and APIs for production Gen AI applications, plus the frontends that use them
+\end{cvitems}
+
+\job{Blockchain / Backend Developer}{Jul 2024 -- May 2025}{Timechain Labs}{Remote}
+\begin{cvitems}
+  \item Built scalable NestJS backend services with Swagger/OpenAPI-documented REST endpoints, plus Svelte frontends
+  \item Led frontend delivery for the Deep Revenue Sharing System MVP for investors
+\end{cvitems}
+
+\job{Technical Intern}{Feb -- Apr 2026}{Estah Society}{Hyderabad, Hybrid}
+\begin{cvitems}
+  \item Investigated and resolved a live security compromise of the organisation's website and restored service
+  \item Rebuilt an initiative website as a NestJS application
+\end{cvitems}
+
+\job{Software Developer Intern}{Aug -- Oct 2025}{Coforge}{Greater Noida, On-site}
+\begin{cvitems}
+  \item Maintained Bata's Java Spring e-commerce platform; found and documented critical bugs and fixed them with the team
+\end{cvitems}
+
+\job{Full Stack Developer}{2024}{Wallet Hunter Token 2049}{Remote}
+\begin{cvitems}
+  \item Wrote Python backend modules for automation and integrated third-party APIs for wallet tracking
+\end{cvitems}
+
+\noindent\textbf{Also:} Software Developer, GoodBreach (Flutter + Next.js/MongoDB, MVP to product, 2025); G\&PS DGA Intern, KPMG India (analytics dashboard, RFPs, 2025);
+Cybersecurity Intern, Threat Prism (vulnerability assessment, 2024).
+
+% ==============================================================================
+% EDUCATION, CERTS, ACHIEVEMENTS
+% ==============================================================================
+\cvsection{Education}
+\noindent \textbf{B.Tech (Hons.), Computer Science \& Engineering} \hfill \textbf{CGPA: 9.44} \\
+\textit{KL University, Hyderabad -- Cybersecurity \& Blockchain specialisation} \hfill \textit{2022 -- 2026}
+
+\cvsection{Certifications}
+\noindent AWS Certified Cloud Practitioner \textbar\ AWS Academy Cloud Security Builder \textbar\ Google Cloud Engineering Certificate \textbar\
+Redis Associate Cloud Operator \textbar\ Red Hat Certified Enterprise Application Developer \textbar\ CEH -- Certified Ethical Hacker (EC-Council) \textbar\
+Oracle Cloud Infrastructure 2025 Foundations Associate \textbar\ Postman API Fundamentals Student Expert
+
+\cvsection{Achievements}
+\noindent 9 hackathon awards, including 1st Place at Monad Hackathon Delhi V4, RootStock Hackathon and Impact Tech Hackathon (2x), and Top 5 at Ripple Hackathon, IIT Bombay.
+
+\end{document}
